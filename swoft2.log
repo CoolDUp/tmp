@@ -41,7 +41,7 @@ Percentage of the requests served within a certain time (ms)
   99%    148
  100%    153 (longest request)
 
-work_num = 8
+work_num = 2
 ab -n 10000 -c 2000 -k 127.0.0.1:18306/
 进行5次测试，以下为最高QPS记录
 
