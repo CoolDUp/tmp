@@ -1,0 +1,87 @@
+work_num = 8
+ab -n 10000 -c 2000 -k 127.0.0.1:9501/
+进行5次测试，以下为最高QPS记录
+
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+
+Server Software:        EasySwoole
+Server Hostname:        127.0.0.1
+Server Port:            9501
+
+Document Path:          /
+Document Length:        1523 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   0.376 seconds
+Complete requests:      10000
+Failed requests:        0
+Keep-Alive requests:    10000
+Total transferred:      16700000 bytes
+HTML transferred:       15230000 bytes
+Requests per second:    26624.64 [#/sec] (mean)
+Time per request:       75.118 [ms] (mean)
+Time per request:       0.038 [ms] (mean, across all concurrent requests)
+Transfer rate:          43421.04 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   17  34.9      0     120
+Processing:     7   44  12.5     44     120
+Waiting:        1   44  12.4     44      93
+Total:          7   61  41.9     44     181
+
+Percentage of the requests served within a certain time (ms)
+  50%     44
+  66%     48
+  75%     63
+  80%    111
+  90%    138
+  95%    154
+  98%    167
+  99%    174
+ 100%    181 (longest request)
+
+
+
+work_num = 2
+ab -n 10000 -c 2000 -k 127.0.0.1:9501/
+进行5次测试，以下为最高QPS记录
+
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+
+Server Software:        EasySwoole
+Server Hostname:        127.0.0.1
+Server Port:            9501
+
+Document Path:          /
+Document Length:        1523 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   0.789 seconds
+Complete requests:      10000
+Failed requests:        0
+Keep-Alive requests:    10000
+Total transferred:      16700000 bytes
+HTML transferred:       15230000 bytes
+Requests per second:    12667.61 [#/sec] (mean)
+Time per request:       157.883 [ms] (mean)
+Time per request:       0.079 [ms] (mean, across all concurrent requests)
+Transfer rate:          20659.09 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   14  28.2      0      95
+Processing:    44  120  33.0    138     141
+Waiting:        0  120  33.0    138     141
+Total:         49  134   9.7    138     143
+
+Percentage of the requests served within a certain time (ms)
+  50%    138
+  66%    139
+  75%    139
+  80%    139
+  90%    140
+  95%    140
+  98%    140
+  99%    140
+ 100%    143 (longest request)
